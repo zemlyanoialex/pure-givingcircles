@@ -1,0 +1,301 @@
+.poweredby {
+  padding-top: 20px;
+}
+
+.gc-go-back {
+  background: #CA663A; /* we should set this as the main color in the admin / Done */
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 20px;  
+}
+
+.gc-container {
+  float: left;
+  border: 1px solid #e0e0e0;
+  padding-bottom: 30px;
+}
+
+.gc-header {
+  width: 100%;
+  display: block;
+  float: left;
+}
+
+.gc-header img {
+  width: 100%;
+  height: auto;
+}
+
+.gc-intro {
+  width: 100%;
+  float: left;
+}
+
+.gc-avatar {
+  width: 16%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: left;
+  margin-top: -55px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+.gc-info {
+  width: 51%;
+  float: left;
+  margin-right: 4%;
+}
+
+.gc-info h2 {
+  margin: 10px 0 0 0;
+  line-height: 120%;
+}
+
+.gc-info p.gc-organizer {
+  font-size: .9em;
+  margin: 0;
+}
+
+.gc-info ul {
+  margin:10px 0;
+  padding: 10px 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.gc-info ul li {
+  list-style-type: none;
+  display: inline-block;
+  width: 49%;
+  font-size: .9em;
+}
+
+.gc-info ul li:last-child {
+  text-align: right;
+}
+
+.gc-stat {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.gc-join {
+  width: 23%;
+  float: left;
+  padding-top: 20px;
+  padding-right: 2%;
+}
+
+.gc-join p {
+  font-size: .8em;
+  line-height: 110%;
+  text-align: center;
+  padding-top: 0px;
+}
+
+.gc-join p:last-child {
+  border-top:1px solid #e0e0e0;
+  padding-top:10px;
+}
+
+a.gc-pure-button {
+  background: #CA663A; /* we should set this as the main color in the admin / Done */
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 2px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.gc-body {
+  float: left;
+  width: 100%;
+  padding-left: 4%; 
+  padding-right: 4%;
+  margin-top: 10px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+#gc-tabs div {
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+#gc-tabs h3 {
+  margin: 0;
+}
+
+#gc-tabs ul.gc-tabs-list {  
+  margin:0;
+  padding:0;
+}
+
+#gc-tabs ul.gc-tabs-list li{
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+}
+
+#gc-tabs ul.gc-tabs-list li a {
+  display: block;
+  background: #e0e0e0;
+  padding: 10px 30px; 
+  font-weight: bold;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+#gc-tabs ul.gc-tabs-list li.active a,
+#gc-tabs ul.gc-tabs-list li a:hover {
+  display: block;
+  background: #666;
+  color: #fff; /* we should set this as the main color in the admin / Done */
+}
+
+ul.gc-members,
+ul.gc-causes {
+  list-style: none;
+  padding: 0;
+  margin: 0 !important;
+}
+
+.gc-members li,
+.gc-causes li {
+  padding: 20px 0;
+  list-style: none !important;
+  border-top: 1px solid #e0e0e0;
+}
+.gc-members li{
+  height:100px;
+}
+.gc-members li:first-child,
+.gc-causes li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.gc-members li:last-child,
+.gc-causes li:last-child {
+  padding-bottom: 0;
+}
+
+.gc-members h4,
+.gc-causes h4 {
+  margin: 0;
+}
+.gc-members h4 {
+  line-height: 80px;
+}
+
+.gc-members p,
+.gc-causes p {
+  margin: 0;
+  font-size: .9em;
+}
+
+.gc-members li img,
+.gc-causes li img {
+  float: left;
+  margin-right: 20px;
+  width: 70px;
+  height: auto;
+}
+
+.gc-members li .gc-cause-avatar {
+  border-radius: 100%;
+  width:16%;
+  height:80px;
+  float:left;
+  margin-right:20px;
+}
+
+.gc-listing {
+  float: left;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+}
+
+.gc-listing-single {
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.gc-listing-avatar-container {
+  width: 10%;
+  margin-right: 10%;
+  float: left;
+}
+
+.gc-listing-avatar {
+  float: left;
+    width: 75px;
+    height: 75px;
+  border-radius: 100%;
+  margin-right: 20px;
+  background-size: 100%;
+}
+
+.gc-listing-info {
+  float: left;
+  width: 75%;
+}
+
+.gc-listing-info p {
+  font-size: .9em;
+  margin: 0;
+  color: #666;
+}
+
+.gc-listing-single h3 {
+  margin: 0; 
+}
+
+@media only screen and (max-device-width : 768px) {
+  
+  .gc-info,
+  .gc-join {
+    width: 98%;
+    padding-left: 4%;
+    padding-right: 4%; 
+  }
+
+  #gc-tabs ul.gc-tabs-list li a {
+    padding: 10px 15px;
+  }
+
+}
+
+.pc-avatars-list {
+  list-style: none !important;
+  display: inline-block !important;
+}
+.pc-avatars-list li {
+  list-style: none !important;
+  display: inline-block !important;
+  width: 76px;
+  height: 76px;
+}
+.pc-avatars-list.circular li {
+  border-radius: 38px;
+  -webkit-border-radius: 38px;
+  -moz-border-radius: 38px;
+}
+.pc-avatars-list.circular li img { opacity: 0; }
