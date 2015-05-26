@@ -2,6 +2,14 @@
 
 A plugin to display one or a list of your Giving Circles from the Pure Charity app.
 
+## Installation
+
+In order to install the plugin:
+
+1. Copy the `/purecharity-wp-givingcirles` folder to the `/wp-content/plugins` on your WP install
+2. Activate the plugin through the ‘Plugins’ menu in WordPress
+3. You’re done!
+
 ## Template Tags
 
 ### Giving Circles List
