@@ -106,7 +106,6 @@ function purecharity_wp_givingcircles_updater() {
       'slug' => plugin_basename( __FILE__ ),
       'proper_folder_name' => 'purecharity-wp-givingcircles',
       'api_url' => 'https://api.github.com/repos/purecharity/pure-givingcircles',
-      'raw_url' => 'https://raw.github.com/purecharity/pure-givingcircles/master',
       'raw_url' => 'https://raw.githubusercontent.com/purecharity/pure-givingcircles/master/purecharity-wp-givingcircles/',
       'github_url' => 'https://github.com/purecharity/pure-givingcircles',
       'zip_url' => 'https://github.com/purecharity/pure-givingcircles/archive/master.zip',
