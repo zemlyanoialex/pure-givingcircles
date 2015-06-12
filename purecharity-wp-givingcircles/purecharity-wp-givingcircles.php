@@ -16,7 +16,7 @@
  * Plugin Name:       Pure Charity Giving Circles
  * Plugin URI:        http://purecharity.com/purecharity-wp-givingcircles-uri/
  * Description:       Pure Charity Giving Circles integratiosn via shortcodes to display a Giving Circle or a list of your Giving Circles inside a page
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Rafael Dalprá / Pure Charity
  * Author URI:        http://purecharity.com/
  * License:           GPL-2.0+
@@ -90,4 +90,32 @@ function gc_force_template() {
 	$options = get_option( 'purecharity_givingcircles_settings' );
   include(TEMPLATEPATH . '/' . $options['single_view_template']);
   exit;
+}
+
+/*
+ * Plugin updater using GitHub
+ *
+ * Auto Updates through GitHub
+ *
+ * @since   1.1.2
+ */
+add_action( 'init', 'purecharity_wp_givingcircles_updater' );
+function purecharity_wp_givingcircles_updater() {
+  if ( is_admin() ) { 
+    $gc_config = array(
+      'slug' => plugin_basename( __FILE__ ),
+      'proper_folder_name' => 'purecharity-wp-givingcircles',
+      'api_url' => 'https://api.github.com/repos/purecharity/pure-givingcircles',
+      'raw_url' => 'https://raw.github.com/purecharity/pure-givingcircles/master',
+      'raw_url' => 'https://raw.githubusercontent.com/purecharity/pure-givingcircles/master/purecharity-wp-givingcircles/',
+      'github_url' => 'https://github.com/purecharity/pure-givingcircles',
+      'zip_url' => 'https://github.com/purecharity/pure-givingcircles/archive/master.zip',
+      'sslverify' => true,
+      'requires' => '3.0',
+      'tested' => '3.3',
+      'readme' => 'README.md',
+      'access_token' => '',
+    );
+    new WP_GitHub_Updater( $gc_config );
+  }
 }
