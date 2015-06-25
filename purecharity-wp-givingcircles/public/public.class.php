@@ -23,6 +23,15 @@
 class Purecharity_Wp_Givingcircles_Public {
 
 	/**
+	 * The Shortcode options.
+	 *
+	 * @since    1.1.3
+	 * @access   public
+	 * @var      string    $options    The Shortcode options.
+	 */
+	public static $options;
+
+	/**
 	 * The Giving Circle.
 	 *
 	 * @since    1.0.0
@@ -208,7 +217,19 @@ class Purecharity_Wp_Givingcircles_Public {
 	 */
 	public static function backed_causes_listing(){
 		$html = '<ul class="gc-causes">';
+		$i = 0;
 		foreach(self::$givingcircle->backed_causes as &$backed_cause){
+			if(isset(self::$options['backed_limit']) && (int)self::$options['backed_limit'] == $i){
+				$more_backed = (count(self::$givingcircle->backed_causes)-(int)self::$options['backed_limit']);
+				if($more_backed > 0){
+					$html .= '
+						<li>
+			     		<h4><a href="'.Purecharity_Wp_Base_Public::pc_url().'/'.self::$givingcircle->slug.'" target="_blank">see '.$more_backed.' more backed causes</a></h4>
+					  </li>
+					';
+				}
+				break;
+			}
 			$html .= '
 				<li>
 	    		<span class="gc-cause-avatar"><img src="'.$backed_cause->avatar.'" /></span>
@@ -219,7 +240,7 @@ class Purecharity_Wp_Givingcircles_Public {
 	     		</p>
 			  </li>
 			';
-
+			$i++;
 		}
 		$html .= '</ul>';
 		return $html;					    	
@@ -233,7 +254,19 @@ class Purecharity_Wp_Givingcircles_Public {
 	 */
 	public static function members_listing(){
 		$html = '<ul class="gc-members">';
+    $i = 0;
 		foreach(self::$givingcircle->members as &$member){
+			if(isset(self::$options['members_limit']) && (int)self::$options['members_limit'] == $i){
+				$more_members = (count(self::$givingcircle->members)-(int)self::$options['members_limit']);
+				if($more_members > 0){
+					$html .= '
+						<li>
+			     		<h4><a href="'.Purecharity_Wp_Base_Public::pc_url().'/'.self::$givingcircle->slug.'" target="_blank">see '.$more_members.' more members</a></h4>
+					  </li>
+					';
+				}
+				break;
+			}
 			$html .= '
 				<li>
 	    		<span class="gc-cause-avatar" style="background: url('.$member->avatar.') center; background-size: 100%;"></span>
@@ -241,7 +274,7 @@ class Purecharity_Wp_Givingcircles_Public {
 	     		<p class="gc-location"></p>
 			  </li>
 			';
-
+			$i++;
 		}
 		$html .= '</ul>';
 		return $html;					    	
