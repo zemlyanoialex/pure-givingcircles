@@ -66,7 +66,12 @@ class Purecharity_Wp_Givingcircles_Shortcode {
    */
   public static function giving_circles_shortcode($atts)
   {
-    $options = shortcode_atts( array(), $atts );
+    $options = shortcode_atts( array(
+      'members_limit' => get_query_var('members_limit'),
+      'backed_limit' => get_query_var('backed_limit')
+    ), $atts );
+    Purecharity_Wp_Givingcircles_Public::$options = $options;
+
     if(isset($_GET['slug'])){
       $options = array();
       $options["slug"] = $_GET['slug'];
