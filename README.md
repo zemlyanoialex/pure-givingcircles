@@ -99,6 +99,14 @@ Example (show a giving circle's name and members_count in a page):
 
 ## Shortcodes
 
+### Giving Circles Listing
+
+`[giving_circles members_limit=10 backed_limit=10]`
+
+Possible parameters:
+* `members_limit` - (optional) Defaults to infinite. The number of members to show
+* `backed_limit` - (optional) Defaults to infinite. The number of backed causes to show
+
 ### Single Giving Circle Information
 
 `[giving_circle_info slug=my-gc type=info_type]`
