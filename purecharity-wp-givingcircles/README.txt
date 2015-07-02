@@ -30,6 +30,9 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
+= 1.1.4 =
+* Minor bug fixes.
+
 = 1.1.3 =
 * Added options to limite members and backed causes on the GC view.
 
