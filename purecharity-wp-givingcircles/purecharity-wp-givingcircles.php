@@ -87,8 +87,8 @@ register_activation_hook( __FILE__, array( 'Purecharity_Wp_Givingcircles', 'acti
  * @since    1.1.1
  */
 function gc_force_template() {
-	$options = get_option( 'purecharity_givingcircles_settings' );
-  include(TEMPLATEPATH . '/' . $options['single_view_template']);
+	$options = get_option( 'purecharity_giving_circles_settings' );
+  include(get_template_directory() . '/' . $options['single_view_template']);
   exit;
 }
 

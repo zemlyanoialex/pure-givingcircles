@@ -244,7 +244,7 @@ class Purecharity_Wp_Givingcircles {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		
-		$options = get_option( 'purecharity_givingcircles_settings' );
+		$options = get_option( 'purecharity_giving_circles_settings' );
 
 		if(isset($_GET['slug']) && isset($options['single_view_template']) && $options['single_view_template'] != ''){
 			add_action('template_redirect', 'gc_force_template');
