@@ -1,7 +1,7 @@
-=== Pure Charity Fundraisers ===
+=== Pure Charity Giving Circles ===
 Contributors: rafaeldalpra
 Donate link: http://purecharity.com/
-Tags: purecharity, fundraisers
+Tags: purecharity, giving circles
 Requires at least: 3.0.1
 Tested up to: 3.4
 Stable tag: 4.3
@@ -29,6 +29,9 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 2. This is the second screen shot
 
 == Changelog ==
+
+= 1.2 =
+* Added custom template.
 
 = 1.1.4 =
 * Minor bug fixes.
