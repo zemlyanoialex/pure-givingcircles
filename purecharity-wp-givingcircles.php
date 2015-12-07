@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Pure Charity Giving Circles
  * Plugin URI:        http://purecharity.com/purecharity-wp-givingcircles-uri/
- * Description:       Pure Charity Giving Circles integratiosn via shortcodes to display a Giving Circle or a list of your Giving Circles inside a page
+ * Description:       Pure Charity Giving Circles integrations via shortcodes to display a Giving Circle or a list of your Giving Circles inside a page
  * Version:           1.1.4
  * Author:            Pure Charity
  * Author URI:        http://purecharity.com/
