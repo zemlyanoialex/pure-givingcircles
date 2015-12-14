@@ -1,5 +1,5 @@
 === Pure Charity Giving Circles ===
-Contributors: rafaeldalpra
+Contributors: rafaeldalpra, beverlynelson
 Donate link: http://purecharity.com/
 Tags: purecharity, giving circles
 Requires at least: 3.0.1
@@ -38,9 +38,6 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 = 1.1.3 =
 * Added options to limite members and backed causes on the GC view.
-
-= 1.1.2 =
-* Added GitHub updater process.
 
 = 1.1.2 =
 * Added GitHub updater process.
