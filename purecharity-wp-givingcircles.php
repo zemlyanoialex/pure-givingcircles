@@ -16,7 +16,7 @@
  * Plugin Name:       Pure Charity Giving Circles
  * Plugin URI:        http://purecharity.com/purecharity-wp-givingcircles-uri/
  * Description:       Pure Charity Giving Circles integrations via shortcodes to display a Giving Circle or a list of your Giving Circles inside a page
- * Version:           1.1.4
+ * Version:           1.2
  * Author:            Pure Charity
  * Author URI:        http://purecharity.com/
  * License:           GPL-2.0+
@@ -87,9 +87,18 @@ register_activation_hook( __FILE__, array( 'Purecharity_Wp_Givingcircles', 'acti
  * @since    1.1.1
  */
 function gc_force_template() {
-	$options = get_option( 'purecharity_giving_circles_settings' );
-  include(get_template_directory() . '/' . $options['single_view_template']);
-  exit;
+  try{
+    $options = get_option( 'purecharity_giving_circles_settings' );
+    if($options['single_view_template'] == 'purecharity-plugin-template.php'){
+      include(purecharity_plugin_template());
+    }else{
+      include(TEMPLATEPATH . '/' . $options['single_view_template']); 
+    }
+    exit;
+  }
+  catch(Exception $e){
+    echo "Custom template invalid.";
+  }
 }
 
 /*
