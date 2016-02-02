@@ -219,7 +219,7 @@ ul.gc-causes {
 
 .gc-members li .gc-cause-avatar {
   border-radius: 100%;
-  width:16%;
+  width:80px;
   height:80px;
   float:left;
   margin-right:20px;

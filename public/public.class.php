@@ -321,8 +321,8 @@ class Purecharity_Wp_Givingcircles_Public {
 
 					<div class="gc-join">
 						<a class="gc-pure-button" href="'.self::$givingcircle->join_url.'">Join</a>
-						<p>A minimum monthly donation of $'.self::$givingcircle->minimum_monthly_donation.' is required.</p>
-						<p>Funds Donated: $'.self::$givingcircle->minimum_monthly_donation.'</p>
+						<p>A minimum monthly donation of $'.money_format('$%i', self::$givingcircle->minimum_monthly_donation).' is required.</p>
+						<p>Funds Donated: $'.money_format('$%i', self::$givingcircle->minimum_monthly_donation).'</p>
 					</div>
 				</div>
 
