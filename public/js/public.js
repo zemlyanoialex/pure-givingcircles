@@ -1,6 +1,10 @@
 (function( jQuery ) {
   'use strict';
   $(document).ready(function(){
+
+    var cw = $('.gc-avatar').width();
+    $('.gc-avatar').css({'height':cw+'px'});
+
     jQuery('#gc-tabs div').hide();
     jQuery('#gc-tabs div:first').show();
     jQuery('#gc-tabs ul li:first').addClass('active');
