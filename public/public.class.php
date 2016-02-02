@@ -256,7 +256,14 @@ class Purecharity_Wp_Givingcircles_Public {
 		$html = '<ul class="gc-members">';
     $i = 0;
 		foreach(self::$givingcircle->members as &$member){
-			if(isset(self::$options['members_limit']) && (int)self::$options['members_limit'] == $i){
+			$html .= '
+				<li>
+	    		<span class="gc-cause-avatar" style="background: url('.$member->avatar.') center; background-size: 100%;"></span>
+	     		<h4><a href="'.$member->profile_url.'" target="_blank">'.$member->name.'</a></h4>
+	     		<p class="gc-location"></p>
+			  </li>
+			';
+			if(isset(self::$options['members_limit']) && self::$options['members_limit'] != "" && (int)self::$options['members_limit'] == $i){
 				$more_members = (count(self::$givingcircle->members)-(int)self::$options['members_limit']);
 				if($more_members > 0){
 					$html .= '
@@ -267,13 +274,6 @@ class Purecharity_Wp_Givingcircles_Public {
 				}
 				break;
 			}
-			$html .= '
-				<li>
-	    		<span class="gc-cause-avatar" style="background: url('.$member->avatar.') center; background-size: 100%;"></span>
-	     		<h4><a href="'.$member->profile_url.'" target="_blank">'.$member->name.'</a></h4>
-	     		<p class="gc-location"></p>
-			  </li>
-			';
 			$i++;
 		}
 		$html .= '</ul>';
@@ -321,8 +321,8 @@ class Purecharity_Wp_Givingcircles_Public {
 
 					<div class="gc-join">
 						<a class="gc-pure-button" href="'.self::$givingcircle->join_url.'">Join</a>
-						<p>A minimum monthly donation of $'.money_format('$%i', self::$givingcircle->minimum_monthly_donation).' is required.</p>
-						<p>Funds Donated: $'.money_format('$%i', self::$givingcircle->minimum_monthly_donation).'</p>
+						<p>A minimum monthly donation of '.money_format('$%i', self::$givingcircle->minimum_monthly_donation).' is required.</p>
+						<p>Funds Donated: '.money_format('$%i', self::$givingcircle->minimum_monthly_donation).'</p>
 					</div>
 				</div>
 
