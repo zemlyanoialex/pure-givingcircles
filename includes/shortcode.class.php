@@ -72,9 +72,9 @@ class Purecharity_Wp_Givingcircles_Shortcode {
     ), $atts );
     Purecharity_Wp_Givingcircles_Public::$options = $options;
 
-    if(isset($_GET['slug'])){
+    if(isset($_GET['giving_circle'])){
       $options = array();
-      $options["slug"] = $_GET['slug'];
+      $options["giving_circle"] = $_GET['giving_circle'];
       return self::giving_circle_shortcode($options);
     }else{
       $givingcircles = self::$base_plugin->api_call('giving_circles');
@@ -97,13 +97,13 @@ class Purecharity_Wp_Givingcircles_Shortcode {
   public static function giving_circle_shortcode($atts)
   {
     $options = shortcode_atts( array(
-      'slug' => false,
+      'giving_circle' => false,
       'members_limit' => get_query_var('members_limit'),
       'backed_limit' => get_query_var('backed_limit')
     ), $atts );
 
-    if ($options['slug']) {
-      $givingcircle = self::$base_plugin->api_call('giving_circles/'. $options['slug']);
+    if ($options['giving_circle']) {
+      $givingcircle = self::$base_plugin->api_call('giving_circles/'. $options['giving_circle']);
       
       if ($givingcircle) {
         $givingcircle = $givingcircle->giving_circle;
@@ -124,11 +124,11 @@ class Purecharity_Wp_Givingcircles_Shortcode {
   public static function giving_circle_info_shortcode($atts)
   {
     $options = shortcode_atts( array(
-      'slug' => false,
+      'giving_circle' => false,
       'type' => false
     ), $atts );
-    if(isset($options['slug'])){
-      $givingcircle = self::$base_plugin->api_call('giving_circles/'. $options['slug'])->giving_circle;
+    if(isset($options['giving_circle'])){
+      $givingcircle = self::$base_plugin->api_call('giving_circles/'. $options['giving_circle'])->giving_circle;
       switch($options['type']){
         case 'members_count':
           return count($givingcircle->members);
